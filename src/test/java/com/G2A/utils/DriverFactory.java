@@ -12,7 +12,7 @@ public class DriverFactory {
     private static WebDriver driver;
 
     public static WebDriver getDriver(Browsers browser) {
-        if(driver==null) {
+        if (driver == null) {
             switch (browser) {
                 case CHROME -> {
                     WebDriverManager.chromedriver().setup();

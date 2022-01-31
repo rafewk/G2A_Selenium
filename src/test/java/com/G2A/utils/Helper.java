@@ -10,12 +10,13 @@ import java.time.Duration;
 
 public class Helper {
 
-    public static void waitToBeClickable(WebDriver driver, WebElement webElement){
+    public static void waitToBeClickable(WebDriver driver, WebElement webElement) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
-    public static void waitToBeVisible(WebDriver driver, By locator){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+
+    public static void waitToBeVisible(WebDriver driver, By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
